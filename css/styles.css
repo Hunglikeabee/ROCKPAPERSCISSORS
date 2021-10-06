@@ -83,6 +83,16 @@ main {
     box-shadow: 0px 0px 3px 3px rgb(83, 255, 112)
 }
 
+.tie-score {
+    background-color: white;
+    font-size: 26px;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 3px pink;
+}
+
 .minus-score {
     background-color: white;
     font-size: 26px;
@@ -135,12 +145,17 @@ main {
     }
 
     .plus-score {
-        font-size: 24px;
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .tie-score {
+        font-size: 20px;
         padding: 5px;
     }
 
     .minus-score {
-        font-size: 24px;
+        font-size: 20px;
         padding: 5px;
     }
 }

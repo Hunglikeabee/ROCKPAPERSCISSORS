@@ -8,6 +8,7 @@ scissorHand.addEventListener("click", numberRanomizer);
 
 const result = document.querySelector(".result")
 const scorePlus = document.querySelector(".plus-score");
+const scoreTie = document.querySelector(".tie-score");
 const scoreMinus = document.querySelector(".minus-score");
 
 gameScore = [
@@ -17,6 +18,7 @@ gameScore = [
 ]
 
 gameScore.plusScore = 0;
+gameScore.tieScore = 0;
 gameScore.minusScore = 0;
 
 async function numberRanomizer(event) {
@@ -65,6 +67,8 @@ async function numberRanomizer(event) {
 
     if (sup === numberClicked) {
         result.innerHTML = `<div>You picked ${yourPick} the computer also picked ${computerChoice}! ${tie}</div>`
+        gameScore.tieScore = parseInt(gameScore.tieScore) + 1;
+        scoreTie.innerHTML = `Wins: ${gameScore.tieScore}`
     }
     else if(sup === 1 && numberClicked === 2) {
         result.innerHTML = `<div>You picked ${yourPick} the computer picked ${computerChoice}, paper covers rock, ${victory}</div>`
@@ -106,6 +110,8 @@ clearResult.addEventListener("click", clearResultFunction);
 function clearResultFunction() {
     gameScore.plusScore = 0;
     scorePlus.innerHTML = `Wins: ${gameScore.plusScore}`
+    gameScore.tieScore = 0;
+    scoreTie.innerHTML = `Ties: ${gameScore.tieScore}`
     gameScore.minusScore = 0;
     scoreMinus.innerHTML = `Losses: ${gameScore.minusScore}`
 
