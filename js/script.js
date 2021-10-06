@@ -68,7 +68,7 @@ async function numberRanomizer(event) {
     if (sup === numberClicked) {
         result.innerHTML = `<div>You picked ${yourPick} the computer also picked ${computerChoice}! ${tie}</div>`
         gameScore.tieScore = parseInt(gameScore.tieScore) + 1;
-        scoreTie.innerHTML = `Wins: ${gameScore.tieScore}`
+        scoreTie.innerHTML = `Ties: ${gameScore.tieScore}`
     }
     else if(sup === 1 && numberClicked === 2) {
         result.innerHTML = `<div>You picked ${yourPick} the computer picked ${computerChoice}, paper covers rock, ${victory}</div>`
