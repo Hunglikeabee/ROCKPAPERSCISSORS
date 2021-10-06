@@ -22,15 +22,28 @@ h1 {
     font-size: 40px;
 }
 
+h2 {
+    font-size: 26px;
+}
+
 main {
     background-color: black;
 }
 
-.far {
+.choose {
+    text-align: center;
+    color: white;
+}
+
+.far, .fas {
   color: orange;
   font-size: 100px;
   margin: 0 auto;
   padding: 50px;
+}
+
+.fas {
+    color: red;
 }
 
 .far:hover {
@@ -82,6 +95,7 @@ main {
 
 .clear-result {
     display: flex;
+    background-color: white;;
     margin: 30px auto;
     border: 2px solid black;
     border-radius: 10px;
@@ -101,11 +115,15 @@ main {
         font-size: 20px;
     }
 
-    header {
-        font-size: 24px;
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
     }
     
-    .far {
+    .far, .fas {
         margin-bottom: 30px;
         font-size: 60px;
         padding: 20px;

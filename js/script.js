@@ -19,13 +19,12 @@ gameScore = [
 gameScore.plusScore = 0;
 gameScore.minusScore = 0;
 
-function numberRanomizer(event) {
+async function numberRanomizer(event) {
     
     let sup = Math.floor(Math.random() * 3) + 1;
     let numberClicked = parseInt(event.target.dataset.product)
 
     let choise;
-
     switch(sup) {
         case 1: 
             choise = "ROCK";
@@ -39,11 +38,9 @@ function numberRanomizer(event) {
             choise = "SCISSORS"
             break;
     }
-
     let computerChoice = choise.fontcolor("red");
     
     let yourNumber;
-    
     switch(numberClicked) {
         case 1: 
         yourNumber = "ROCK";
@@ -58,14 +55,10 @@ function numberRanomizer(event) {
     let yourPick = yourNumber.fontcolor("green");
 
 
-
-
     let victoryText = "YOU WIN!";
     let victory = victoryText.fontcolor("gold");
-
     let loseText = "YOU LOSE!";
     let lose = loseText.fontcolor("red");
-
     let tieText = "ITS A TIE!";
     let tie = tieText.fontcolor("pink")
 
@@ -97,7 +90,7 @@ function numberRanomizer(event) {
         result.innerHTML = `<div>You picked ${yourPick} the computer picked ${computerChoice}, rock crushes scissors, ${victory}</div>`
         gameScore.plusScore = parseInt(gameScore.plusScore) + 1;
         scorePlus.innerHTML = `Wins: ${gameScore.plusScore}`
-        
+        handsRock.innerHTML = `<i class="fas fa-times"></i>`  
     }
     else if(sup === 3 && numberClicked === 2) {
         result.innerHTML = `<div>You picked ${yourPick} the computer picked ${computerChoice}, scissors cuts paper, ${lose}</div>`
@@ -106,8 +99,6 @@ function numberRanomizer(event) {
     }
     
 }
-
-
 
 
 const clearResult = document.querySelector(".clear-result");
