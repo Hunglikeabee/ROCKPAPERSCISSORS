@@ -90,7 +90,6 @@ async function numberRanomizer(event) {
         result.innerHTML = `<div>You picked ${yourPick} the computer picked ${computerChoice}, rock crushes scissors, ${victory}</div>`
         gameScore.plusScore = parseInt(gameScore.plusScore) + 1;
         scorePlus.innerHTML = `Wins: ${gameScore.plusScore}`
-        handsRock.innerHTML = `<i class="fas fa-times"></i>`  
     }
     else if(sup === 3 && numberClicked === 2) {
         result.innerHTML = `<div>You picked ${yourPick} the computer picked ${computerChoice}, scissors cuts paper, ${lose}</div>`

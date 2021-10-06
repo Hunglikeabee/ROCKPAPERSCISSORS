@@ -35,20 +35,20 @@ main {
     color: white;
 }
 
-.far, .fas {
+.far {
   color: orange;
   font-size: 100px;
   margin: 0 auto;
   padding: 50px;
 }
 
-.fas {
-    color: red;
-}
-
 .far:hover {
     font-size: 120px;
     padding: 40px;
+}
+
+.far:active {
+    color: blue;
 }
 
 .hands__container {
